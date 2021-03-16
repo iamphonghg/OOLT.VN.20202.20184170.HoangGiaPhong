@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class Aims {
     public static void main(String[] args) {
         Order anOrder = new Order();
@@ -89,5 +91,9 @@ public class Aims {
         anOrder.removeDigitalVideoDisc(dvd9);
         System.out.print("Total Cost is: ");
         System.out.println(anOrder.totalCost());
+
+        (new MyDate()).print();
+        (new MyDate()).accept();
+
     }
 }
