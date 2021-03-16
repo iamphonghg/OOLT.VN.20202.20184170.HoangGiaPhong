@@ -14,26 +14,35 @@ public class Order {
         this.qtyOrdered = qtyOrdered;
     }
 
-    public boolean addDigitalVideoDisc(DigitalVideoDisc disc) {
+    public void addDigitalVideoDisc(DigitalVideoDisc disc) {
         if (qtyOrdered != 10) {
             itemsOrdered[qtyOrdered] = disc;
             qtyOrdered++;
-            System.out.println("The disc has been added");
-            return true;
+            System.out.println("The disc has been added.");
         } else {
-            System.out.println("The order is almost full");
-            return false;
+            System.out.println("The order is almost full.");
         }
     }
 
     public boolean removeDigitalVideoDisc(DigitalVideoDisc disc) {
-
+        for (int i = 0; i < qtyOrdered; i++) {
+            if (itemsOrdered[i] == disc) {
+                for (int j = i; j < qtyOrdered - 1; j++) {
+                    itemsOrdered[j] = itemsOrdered[j + 1];
+                }
+                qtyOrdered--;
+                System.out.println("The disc has been deleted.");
+                return true;
+            }
+        }
+        System.out.println("Not found disc!");
+        return false;
     }
 
     public float totalCost() {
         float totalCost = 0;
-        for (DigitalVideoDisc d : itemsOrdered) {
-            totalCost += d.getCost();
+        for (int i = 0; i < qtyOrdered; i++) {
+            totalCost += itemsOrdered[i].getCost();
         }
         return totalCost;
     }
