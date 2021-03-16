@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public class Order {
+public class Order {
+
 }
