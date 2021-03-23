@@ -40,6 +40,12 @@ public class MyDate {
         this.year = year;
     }
 
+    public String getDate() {
+        return date;
+    }
+    public void setDate(String date) {
+        this.date = date;
+    }
 
     public boolean accept() {
         System.out.println("Enter a date: ");
