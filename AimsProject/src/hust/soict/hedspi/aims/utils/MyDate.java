@@ -1,3 +1,6 @@
+package hust.soict.hedspi.aims.utils;
+
+
 import java.util.Scanner;
 
 public class MyDate {
