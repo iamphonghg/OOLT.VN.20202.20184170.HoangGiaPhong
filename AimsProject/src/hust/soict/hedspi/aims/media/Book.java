@@ -41,4 +41,12 @@ public class Book extends Media {
     public void removeAuthor(String authorName) {
 
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "authors=" + authors +
+                ", id=" + id +
+                '}';
+    }
 }
