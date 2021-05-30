@@ -11,7 +11,7 @@ public class Calendar {
             if (iYear < 0) {
                 System.out.println("Year invalid! Please re-enter!");
             }
-        } while(iYear < 0);
+        } while (iYear < 0);
 
         int check = 0;
         Scanner input = new Scanner(System.in);
